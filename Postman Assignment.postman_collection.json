@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "b660ca27-9d92-44e5-a4b4-ec083c652df5",
+		"name": "Postman Assignment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23337706"
+	},
+	"item": [
+		{
+			"name": "Get Url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nytimes.com/svc/books/v3/lists.json",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nytimes",
+						"com"
+					],
+					"path": [
+						"svc",
+						"books",
+						"v3",
+						"lists.json"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Url with api key",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nytimes.com/svc/books/v3/lists.json?api-key={{api-key}}&List=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nytimes",
+						"com"
+					],
+					"path": [
+						"svc",
+						"books",
+						"v3",
+						"lists.json"
+					],
+					"query": [
+						{
+							"key": "api-key",
+							"value": "{{api-key}}"
+						},
+						{
+							"key": "List",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Url with hardcover notification",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nytimes.com/svc/books/v3/lists.json?api-key={{api-key}}&List=hardcover-nonfiction",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nytimes",
+						"com"
+					],
+					"path": [
+						"svc",
+						"books",
+						"v3",
+						"lists.json"
+					],
+					"query": [
+						{
+							"key": "api-key",
+							"value": "{{api-key}}"
+						},
+						{
+							"key": "List",
+							"value": "hardcover-nonfiction"
+						},
+						{
+							"key": "List\n",
+							"value": "1",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get rank parameter",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nytimes.com/svc/books/v3/lists.json?api-key={{api-key}}&List=hardcover-nonfiction&published_date=2022-11-27&rank=1&rank-last-week=1",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nytimes",
+						"com"
+					],
+					"path": [
+						"svc",
+						"books",
+						"v3",
+						"lists.json"
+					],
+					"query": [
+						{
+							"key": "api-key",
+							"value": "{{api-key}}"
+						},
+						{
+							"key": "List",
+							"value": "hardcover-nonfiction"
+						},
+						{
+							"key": "published_date",
+							"value": "2022-11-27"
+						},
+						{
+							"key": "rank",
+							"value": "1"
+						},
+						{
+							"key": "rank-last-week",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api-key",
+			"value": "Api key ",
+			"type": "string"
+		}
+	]
+}
